@@ -43,13 +43,44 @@ angular
           }
         }
       })
-      .when('/category', {
+      .when('/category/:id', {
         templateUrl: 'views/category.html',
         controller: 'CategoryCtrl',
+        resolve: {
+          category: function($q, $route, MoltinAuth) {
+            var deffered = $q.defer();
+            $q.when(MoltinAuth).then(function(moltin) {
+              moltin.Category.Get($route.current.params.id, function(category) {
+                deffered.resolve(category);
+              });
+            })
+            return deffered.promise;
+          },
+          products: function($q, $route, MoltinAuth) {
+            var deffered = $q.defer();
+            $q.when(MoltinAuth).then(function(moltin) {
+              moltin.Product.List({category: $route.current.params.id}, function(products) {
+                deffered.resolve(products);
+              });
+            })
+            return deffered.promise;
+          }
+        }
       })
-      .when('/product', {
+      .when('/product/:id', {
         templateUrl: 'views/product.html',
         controller: 'ProductCtrl',
+        resolve: {
+          product: function($q, $route, MoltinAuth) {
+            var deffered = $q.defer();
+            $q.when(MoltinAuth).then(function(moltin) {
+              moltin.Product.Get($route.current.params.id, function(product) {
+                deffered.resolve(product);
+              });
+            })
+            return deffered.promise;
+          }
+        }
       })
       .when('/cart', {
         templateUrl: 'views/cart.html',

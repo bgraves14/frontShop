@@ -8,10 +8,7 @@
  * Controller of the frontShopApp
  */
 angular.module('frontShopApp')
-  .controller('ProductCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('ProductCtrl', function ($scope, product) {
+    $scope.product = product;
+    console.log(product);
   });
