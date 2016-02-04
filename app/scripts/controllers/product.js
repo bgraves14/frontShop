@@ -23,5 +23,4 @@ angular.module('frontShopApp')
         }, 1000)
       });
     }
-    console.log(product);
   });

@@ -10,5 +10,4 @@
 angular.module('frontShopApp')
   .controller('StoreCtrl', function ($scope, categories) {
     $scope.categories = categories;
-    console.log(categories);
   });

@@ -10,5 +10,4 @@
 angular.module('frontShopApp')
   .controller('CartCtrl', function ($scope, cart) {
     $scope.cart = cart;
-    console.log(cart);
   });
