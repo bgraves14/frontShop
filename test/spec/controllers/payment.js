@@ -17,7 +17,5 @@ describe('Controller: PaymentCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(PaymentCtrl.awesomeThings.length).toBe(3);
-  });
+
 });

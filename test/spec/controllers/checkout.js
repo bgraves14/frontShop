@@ -17,7 +17,5 @@ describe('Controller: CheckoutCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(CheckoutCtrl.awesomeThings.length).toBe(3);
-  });
+
 });

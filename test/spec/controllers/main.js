@@ -17,7 +17,5 @@ describe('Controller: MainCtrl', function () {
     });
   }));
 
-  it('has a title', function () {
-    expect(page).to have_content("Boilerplate");
-  });
+
 });
