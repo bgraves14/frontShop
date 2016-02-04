@@ -14,6 +14,6 @@ For this project I wanted to try a new technology that I have heard about called
 
 I am currently in contact with Moltin about getting my discounts working, Moltin has great documentation but I seem to have fallen into a strange area and this should be fixed very shortly.
 
-As I took this project on a more adventurous approach, I do not have a product that is perfect and finished but instead something that was quite interesting and fun for me to do today.
+As I took this project on a more adventurous approach, I do not have a product that is perfect and finished but instead something that was quite interesting and a great learning experience.
 
 Expect a very nice and polished project to come in the next few days!
