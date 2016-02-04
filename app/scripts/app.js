@@ -1,3 +1,8 @@
+.when('/checkout', {
+  templateUrl: 'views/checkout.html',
+  controller: 'CheckoutCtrl',
+  controllerAs: 'checkout'
+})
 'use strict';
 
 /**
@@ -88,8 +93,17 @@ angular
       .when('/cart', {
         templateUrl: 'views/cart.html',
         controller: 'CartCtrl',
+        resolve: {
+          cart: function($q, MoltinAuth) {
+            var deferred = $q.defer();
+            MoltinAuth.then(function(moltin) {
+              moltin.Cart.Contents(function(cart) {
+                deferred.resolve(cart);
+              });
+            })
+            return deferred.promise;
+          },
+        }
       })
-      .otherwise({
-        redirectTo: '/'
-      });
+
   });
