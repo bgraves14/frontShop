@@ -17,7 +17,5 @@ describe('Controller: CategoryCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(CategoryCtrl.awesomeThings.length).toBe(3);
-  });
+
 });

@@ -79,6 +79,9 @@ angular
               });
             })
             return deffered.promise;
+          },
+          moltin: function($q, MoltinAuth) {
+            return MoltinAuth
           }
         }
       })
